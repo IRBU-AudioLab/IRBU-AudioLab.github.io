@@ -1,32 +1,49 @@
-# In the name of Allah
+<!-- In the name of Allah -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IRBU AudioLab</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
     <style>
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        /* === Global Reset === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
         body {
-            background: url('https://images.unsplash.com/photo-1581092795368-2c91a78b45d1?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1581092795368-2c91a78b45d1?auto=format&fit=crop&w=1470&q=80') 
+                        no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             line-height: 1.6;
         }
 
+        /* === Header === */
         header {
             background: rgba(0, 0, 50, 0.7);
             text-align: center;
             padding: 80px 20px;
         }
 
-        header h1 { font-size: 4rem; margin-bottom: 10px; }
-        header p { font-size: 1.5rem; }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
 
+        header p {
+            font-size: 1.5rem;
+        }
+
+        /* === Sections === */
         section {
             padding: 60px 20px;
             text-align: center;
@@ -42,6 +59,7 @@
             margin-bottom: 40px;
         }
 
+        /* === Projects === */
         .projects {
             display: flex;
             flex-wrap: wrap;
@@ -54,13 +72,13 @@
             padding: 30px;
             width: 300px;
             border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
         }
 
         .card h3 {
@@ -86,6 +104,7 @@
             background: #008bbf;
         }
 
+        /* === Contribute Button === */
         .contribute-btn {
             display: inline-block;
             background: #ff6b6b;
@@ -101,17 +120,23 @@
             background: #e05555;
         }
 
+        /* === Footer === */
         footer {
-            background: rgba(0,0,50,0.8);
+            background: rgba(0, 0, 50, 0.8);
             padding: 30px 20px;
             text-align: center;
         }
 
-        @media(max-width: 768px) {
-            .projects { flex-direction: column; align-items: center; }
+        /* === Responsive === */
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -125,7 +150,8 @@
         <h2>About IRBU AudioLab</h2>
         <p>
             IRBU AudioLab is a collaborative platform for students and professors to share audio engineering projects,
-            explore tasks like Automatic Speech Recognition (ASR), Blind Source Separation (BSS), Audio Enhancement, and more.
+            explore tasks like Automatic Speech Recognition (ASR), Blind Source Separation (BSS),
+            Audio Enhancement, and more.
         </p>
     </section>
 
