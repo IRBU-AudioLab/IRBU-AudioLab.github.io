@@ -6,76 +6,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRBU AudioLab</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+        body {
+            background: url('https://images.unsplash.com/photo-1581092795368-2c91a78b45d1?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 50, 0.7);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 { font-size: 4rem; margin-bottom: 10px; }
+        header p { font-size: 1.5rem; }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section.bg-light {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(0, 0, 50, 0.8);
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #00cfff;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #fff;
+            background: #00cfff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .card a:hover {
+            background: #008bbf;
+        }
+
+        .contribute-btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .contribute-btn:hover {
+            background: #e05555;
+        }
+
+        footer {
+            background: rgba(0,0,50,0.8);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .projects { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
 
     <!-- Header -->
-    <header class="bg-blue-700 text-white py-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">IRBU AudioLab</h1>
-            <p class="mt-2 text-lg">Collaborative Audio Research & Projects Hub</p>
-        </div>
+    <header>
+        <h1>IRBU AudioLab</h1>
+        <p>Collaborative Audio Research & Projects Hub</p>
     </header>
 
     <!-- About Section -->
-    <section class="py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold mb-4">About IRBU AudioLab</h2>
-            <p class="text-gray-700 max-w-2xl mx-auto">
-                IRBU AudioLab is a collaborative platform for students and professors to share audio engineering projects,
-                explore tasks like Automatic Speech Recognition (ASR), Blind Source Separation (BSS), Audio Enhancement, and more.
-            </p>
-        </div>
+    <section class="bg-light">
+        <h2>About IRBU AudioLab</h2>
+        <p>
+            IRBU AudioLab is a collaborative platform for students and professors to share audio engineering projects,
+            explore tasks like Automatic Speech Recognition (ASR), Blind Source Separation (BSS), Audio Enhancement, and more.
+        </p>
     </section>
 
     <!-- Projects Section -->
-    <section class="py-12 bg-gray-200">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold mb-8">Projects</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-2">ASR</h3>
-                    <p class="text-gray-700 mb-4">Automatic Speech Recognition projects for research and learning.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Explore Repo</a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-2">BSS</h3>
-                    <p class="text-gray-700 mb-4">Blind Source Separation experiments and audio analysis projects.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Explore Repo</a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-2">Audio Enhancement</h3>
-                    <p class="text-gray-700 mb-4">Noise reduction, equalization, and other audio processing projects.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Explore Repo</a>
-                </div>
-
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>ASR</h3>
+                <p>Automatic Speech Recognition projects for research and learning.</p>
+                <a href="#">Explore Repo</a>
+            </div>
+            <div class="card">
+                <h3>BSS</h3>
+                <p>Blind Source Separation experiments and audio analysis projects.</p>
+                <a href="#">Explore Repo</a>
+            </div>
+            <div class="card">
+                <h3>Audio Enhancement</h3>
+                <p>Noise reduction, equalization, and other audio processing projects.</p>
+                <a href="#">Explore Repo</a>
             </div>
         </div>
     </section>
 
-    <!-- Contribution Section -->
-    <section class="py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold mb-4">Contribute</h2>
-            <p class="text-gray-700 max-w-2xl mx-auto mb-6">
-                Students and professors can contribute by submitting their work via pull requests or uploading their files.
-                Check each project repository for instructions.
-            </p>
-            <a href="https://github.com/IRBU-AudioLab" class="bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition">
-                Visit GitHub
-            </a>
-        </div>
+    <!-- Contribute Section -->
+    <section class="bg-light">
+        <h2>Contribute</h2>
+        <p>
+            Students and professors can contribute by submitting their work via pull requests or uploading their files.
+            Check each project repository for instructions.
+        </p>
+        <a href="https://github.com/IRBU-AudioLab" class="contribute-btn">Visit GitHub</a>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            &copy; 2025 IRBU AudioLab. All rights reserved.
-        </div>
+    <footer>
+        &copy; 2025 IRBU AudioLab. All rights reserved.
     </footer>
 
 </body>
